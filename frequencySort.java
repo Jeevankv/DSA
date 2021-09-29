@@ -5,7 +5,7 @@ import java.util.Hashtable;
 import java.util.Map;
 import java.util.PriorityQueue;
 
-class Solution {
+class frequencySort {
     public static void main(String[] args) {
         frequencySort("tree");
     }
