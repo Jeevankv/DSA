@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class reversewords {
     public static void main(String[] args) {
         System.out.println(reverseWords("Let's take LeetCode contest"));
     }
