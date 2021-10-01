@@ -1,28 +1,23 @@
-import java.util.*;
+import java.util.Map;
 
 class Solution {
     public static void main(String[] args) {
-        System.out.println(reverseWords("Let's take LeetCode contest"));
+        System.out.println(maxPower("abbbbbcccccccdeb"));
     }
 
-    public static String reverseWords(String s) {
-        String[] arr = s.split("\\s+");
-        // StringBuilder ans = new StringBuilder();
-        String ans = "";
-        for (String x : arr) {
-            char[] rArr = x.toCharArray();
-            int left = 0, right = rArr.length - 1;
-            while (left <= right) {
-                char temp = rArr[left];
-                rArr[left] = rArr[right];
-                rArr[right] = temp;
-                left++;
-                right--;
+    public static int maxPower(String s) {
+
+        int max = Integer.MIN_VALUE;
+        int count = 1;
+        for (int i = 0; i < s.length() - 1; i++) {
+            char ch = s.charAt(i);
+            if (ch == s.charAt(i + 1)) {
+                count++;
+            } else {
+                count = 1;
             }
-            ans += ans.copyValueOf(rArr) + " ";
-
+            max = Math.max(max, count);
         }
-
-        return ans.trim();
+        return max;
     }
 }
