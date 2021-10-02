@@ -1,4 +1,6 @@
-class Solution {
+// A word is a pangram if it contains all the english alphabets.
+
+class Pangram {
     public boolean checkIfPangram(String sentence) {
         char[] counter = new char[26];
         for (char ch : sentence.toCharArray()) {
