@@ -1,4 +1,4 @@
-class Solution {
+class SortSentence {
     public static void main(String[] args) {
         System.out.println(sortSentence("is2 sentence4 This1 a3"));
     }
